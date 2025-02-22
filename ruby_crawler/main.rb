@@ -10,7 +10,8 @@ def list_nodes(base_url, total_pages = 1)
       "User-Agent" => "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
     }
     document = Nokogiri::HTML(URI.open(url, headers))
-    div_nodes = document.css('div[data-asin][data-index][data-uuid][data-component-type="s-search-result"]')
+
+    div_nodes = document.xpath('//div[@data-asin][@data-index][@data-uuid][@data-component-type="s-search-result"]')
 
     results = []
     # unique_links = Set.new
@@ -19,12 +20,12 @@ def list_nodes(base_url, total_pages = 1)
       # link = node.at_css('a.a-link-normal.s-line-clamp-2.s-link-style.a-text-normal')&.[]('href')
       # next if unique_links.include?(link)
       # uuid = node['data-uuid']
-      product_title = node.at_css('h2 span')&.text&.strip
-      image_url = node.at_css('img.s-image')&.[]('src')
-      rating = node.at_css('.a-icon-alt')&.text&.strip
-      rating_count = node.at_css('span.s-underline-text')&.text&.strip
-      price = node.at_css('.a-price .a-offscreen')&.text&.strip
-      # item_id = node['data-csa-c-item-id']
+
+      product_title = node.at_xpath('.//div[@data-cy="title-recipe"]//a/h2/span')&.text&.strip
+      image_url = node.at_xpath('.//img[contains(@class, "s-image")]')&.[]('src')
+      rating = node.at_xpath('.//span[contains(@class, "a-icon-alt")]')&.text&.strip
+      rating_count = node.at_xpath('.//div[@data-csa-c-content-id="alf-customer-ratings-count-component"]//a/span[@aria-hidden="true"]')&.text&.strip
+      price = node.at_xpath('.//span[contains(@class, "a-offscreen")]')&.text&.strip
       item_id = node['data-asin']
 
 
