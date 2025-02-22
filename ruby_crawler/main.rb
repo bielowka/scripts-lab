@@ -53,13 +53,21 @@ def monitor_changes(base_url, total_pages = 1, interval = 600)
 
     new_items = current_results.reject { |item| previous_results.any? { |prev_item| prev_item[:item_id] == item[:item_id] } }
     changed_items = current_results.select do |item|
-      previous_results.any? { |prev_item| prev_item[:item_id] == item[:item_id] && !prev_item.eql?(item) }
+      previous_results.any? do |prev_item|
+        prev_item[:item_id] == item[:item_id] && (
+          prev_item[:product_title] != item[:product_title] ||
+          prev_item[:image_url] != item[:image_url] ||
+          prev_item[:rating] != item[:rating] ||
+          prev_item[:rating_count] != item[:rating_count] ||
+          prev_item[:price] != item[:price]
+        )
+      end
     end
 
     new_items.each { |item| puts "New item: #{item}" }
     changed_items.each { |item| puts "Changed item: #{item}" }
 
-    previous_results = current_results
+    previous_results = previous_results + current_results
     sleep(interval)
     puts "-------"
   end
