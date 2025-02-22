@@ -1,0 +1,10 @@
+[
+  {
+    "name": "food_item",
+    "pattern": "(?i)\\b[a-zA-Z]+(?:\\s[a-zA-Z]+)?\\b"
+  },
+  {
+    "name": "special_request",
+    "pattern": "(?i)\\b[a-zA-Z]+(?:\\s[a-zA-Z]+)?\\b"
+  }
+]

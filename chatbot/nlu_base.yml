@@ -1,0 +1,133 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: greet
+  examples: |
+    - Hi
+    - Hello
+    - Hey there
+    - Hi there
+    - Good morning
+    - Good evening
+
+- intent: goodbye
+  examples: |
+    - Bye
+    - Goodbye
+    - See you later
+    - Take care
+    - Talk to you soon
+
+- intent: ask_menu
+  examples: |
+    - What's on the menu?
+    - Show me the menu
+    - What food do you serve?
+    - List all the available dishes
+
+- intent: ask_hours
+  examples: |
+    - What are your opening hours?
+    - When are you open?
+    - Can I visit now?
+    - Tell me your business hours
+
+- intent: ask_open_status
+  examples: |
+    - Is the restaurant open on [Monday](day) at [14:00](time)?
+    - Can I come on [Sunday](day) evening?
+    - Are you open at [8 AM](time) on [Saturday](day)?
+    - What are the hours on [Friday](day)?
+    - What are the hours on [Tuesday](day)?
+    - What are the hours on [Wednesday](day)?
+    - What are the hours on [Thursday](day)?
+
+- intent: order_food
+  examples: |
+    - I’d like to order a [pizza](food_item)
+    - Can I have a [burger](food_item) with [onions](special_request)?
+    - I want [spaghetti carbonara](food_item), extra [cheese](special_request)
+    - Get me a [hot dog](food_item) with [mustard](special_request)
+    - I want a [sushi](food_item)

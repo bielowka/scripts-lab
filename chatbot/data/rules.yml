@@ -1,0 +1,33 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Greet the user
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Provide the menu
+  steps:
+  - intent: ask_menu
+  - action: action_show_menu
+
+- rule: Provide restaurant hours
+  steps:
+  - intent: ask_hours
+  - action: utter_show_hours
+
+- rule: Check if the restaurant is open
+  steps:
+  - intent: ask_open_status
+  - action: action_check_open_status
+
+- rule: Confirm food order
+  steps:
+  - intent: order_food
+  - action: action_place_order

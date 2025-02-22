@@ -1,0 +1,59 @@
+{
+  "type": "MaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "ask_hours": 0,
+        "ask_menu": 1,
+        "ask_open_status": 2,
+        "back": 3,
+        "goodbye": 4,
+        "greet": 5,
+        "nlu_fallback": 6,
+        "order_food": 7,
+        "out_of_scope": 8,
+        "restart": 9,
+        "session_start": 10
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_show_menu": 13,
+        "action_place_order": 14,
+        "action_check_open_status": 15,
+        "utter_goodbye": 16,
+        "utter_greet": 17,
+        "utter_invalid_order": 18,
+        "utter_open_status": 19,
+        "utter_order_confirm": 20,
+        "utter_show_hours": 21
+      },
+      "entities": {
+        "day": 0,
+        "food_item": 1,
+        "special_request": 2,
+        "time": 3
+      },
+      "slots": {
+        "day_0": 0,
+        "time_0": 1
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

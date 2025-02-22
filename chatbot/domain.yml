@@ -1,0 +1,69 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - ask_menu
+  - ask_hours
+  - order_food
+  - ask_open_status
+
+entities:
+  - day
+  - time
+  - food_item
+  - special_request
+
+slots:
+  day:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: day
+  time:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: time
+  food_item:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: food_item
+    influence_conversation: false
+    initial_value: null
+  special_request:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: special_request
+    influence_conversation: false
+    initial_value: null
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I assist you?"
+
+  utter_order_confirm:
+    - text: "Your order has been placed successfully."
+
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+
+  utter_open_status:
+    - text: "Please specify a day and time, and I will check the restaurant’s opening status for you."
+
+  utter_show_hours:
+    - text: "Our opening hours vary by day. Please specify a day, or check our schedule."
+
+  utter_invalid_order:
+    - text: "Sorry, we don't serve that item. Please choose from our menu."
+
+actions:
+  - action_show_menu
+  - action_place_order
+  - action_check_open_status
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

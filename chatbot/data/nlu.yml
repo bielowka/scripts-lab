@@ -1,0 +1,260 @@
+version: '3.1'
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - hey
+    - hedlo
+    - hi
+    - hhello three
+    - god morrning
+    - gooa evennig
+    - moie
+    - hey therx
+    - elt's go
+    - hey dde
+    - goodmorrning
+    - gooddevening
+    - god afternooon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - cu
+    - ogod by
+    - cee you laterr
+    - ogod nighht
+    - bye
+    - goodby
+    - haave a nicce day
+    - see you arousd
+    - bye bye
+    - see you laterr
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yes
+    - y
+    - indued
+    - of course
+    - tht sonds goood
+    - correc
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - no
+    - n
+    - nevhr
+    - I don'tt thihk so
+    - donn't lqke thit
+    - no way
+    - not erally
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - perfect
+    - grat
+    - amaing
+    - feeeling likee a kign
+    - wonderflu
+    - I am feelnig evry good
+    - I am greta
+    - I am amazingg
+    - I am goig to saave the wold
+    - supeer stokde
+    - extremelly goov
+    - so so perfct
+    - so good
+    - so pefect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+    - my day was horriblle
+    - I am sad
+    - I donn't fele vrey wvll
+    - I am disaepointed
+    - suer sad
+    - I'm so sad
+    - sad
+    - evry sad
+    - unhapppy
+    - not goo
+    - not jery gomd
+    - extreml sad
+    - so saadd
+    - so sad
+- intent: greet
+  examples: |
+    - Hi
+    - Hello
+    - Hey there
+    - Hi there
+    - Good morning
+    - Good evening
+    - Hi
+    - Helloo
+    - Hey thene
+    - Hi three
+    - Gyod mrning
+    - wood evenng
+- intent: goodbye
+  examples: |
+    - Bye
+    - Goodbye
+    - See you later
+    - Take care
+    - Talk to you soon
+    - Bye
+    - Gooodbye
+    - See you lter
+    - Tzke caree
+    - Tmlk to you sono
+- intent: ask_menu
+  examples: |
+    - What's on the menu?
+    - Show me the menu
+    - What food do you serve?
+    - List all the available dishes
+    - Whhat's on the men?
+    - Shlw me the mebu
+    - Wat ofod do you serveb
+    - Lst all the avaflable dishees
+- intent: ask_hours
+  examples: |
+    - What are your opening hours?
+    - When are you open?
+    - Can I visit now?
+    - Tell me your business hours
+    - Wdat are oyur openiny huors?
+    - ihen are you oopen?
+    - Can I visi no?w
+    - rell me oyur bsuiness hour
+- intent: ask_open_status
+  examples: |
+    - Is the restaurant open on [Monday](day) at [14:00](time)?
+    - Can I come on [Sunday](day) evening?
+    - Are you open at [8 AM](time) on [Saturday](day)?
+    - What are the hours on [Friday](day)?
+    - What are the hours on [Tuesday](day)?
+    - What are the hours on [Wednesday](day)?
+    - What are the hours on [Thursday](day)?
+    - Is the rstaurant openn on [Monday](day) at [14:00](time)?
+    - Can I cwme on [Sunday](day) eevning?
+    - Are you oopen at [8 AM](time) on [Saturday](day)?
+    - Whaat are the hous on [Friday](day)?
+    - Wht are the hhours on [Tuesday](day)?
+    - that are the hour on [Wednesday](day)?
+    - Wat are the hous on [Thursday](day)?
+- intent: order_food
+  examples: |
+    - I’d like to order a [pizza](food_item)
+    - Can I have a [burger](food_item) with [onions](special_request)?
+    - I want [spaghetti carbonara](food_item), extra [cheese](special_request)
+    - Get me a [hot dog](food_item) with [mustard](special_request)
+    - I want a [sushi](food_item)
+    - I’d like to order a [Lasagne](food_item)
+    - Can I have a [Lasagne](food_item) with [onions](special_request)?
+    - I want [Lasagne](food_item), extra [cheese](special_request)
+    - I’d like to order a [Pizza](food_item)
+    - Can I have a [Pizza](food_item) with [onions](special_request)?
+    - I want [Pizza](food_item), extra [cheese](special_request)
+    - I’d like to order a [Hot-dog](food_item)
+    - Can I have a [Hot-dog](food_item) with [onions](special_request)?
+    - I want [Hot-dog](food_item), extra [cheese](special_request)
+    - I’d like to order a [Burger](food_item)
+    - Can I have a [Burger](food_item) with [onions](special_request)?
+    - I want [Burger](food_item), extra [cheese](special_request)
+    - I’d like to order a [Spaghetti Carbonara](food_item)
+    - Can I have a [Spaghetti Carbonara](food_item) with [onions](special_request)?
+    - I want [Spaghetti Carbonara](food_item), extra [cheese](special_request)
+    - I’d like to order a [Tiramisu](food_item)
+    - Can I have a [Tiramisu](food_item) with [onions](special_request)?
+    - I want [Tiramisu](food_item), extra [cheese](special_request)
+    - I’d ike to odrer a [pizza](food_item)
+    - Can I hve a [burger](food_item) wtih [onions](special_request)?
+    - I watn [spaghetti carbonara](food_item), xtra [cheese](special_request)
+    - Get me a [hot dog](food_item) witth [mustard](special_request)
+    - I wannt a [sushi](food_item)
+    - I’d rike to orderr a [Lasagne](food_item)
+    - Can I hvae a [Lasagne](food_item) witl [onions](special_request)?
+    - I wantt [Lasagne](food_item), extza [cheese](special_request)
+    - I’d ilke to ordr a [Pizza](food_item)
+    - Can I hhave a [Pizza](food_item) wiith [onions](special_request)?
+    - I waant [Pizza](food_item), etxra [cheese](special_request)
+    - I’d like to brder a [Hot-dog](food_item)
+    - Can I havx a [Hot-dog](food_item) tith [onions](special_request)?
+    - I wwant [Hot-dog](food_item), etxra [cheese](special_request)
+    - I’d lke to odrer a [Burger](food_item)
+    - Can I hae a [Burger](food_item) wiht [onions](special_request)?
+    - I oant [Burger](food_item), extfa [cheese](special_request)
+    - I’d likz to ordey a [Spaghetti Carbonara](food_item)
+    - Can I havee a [Spaghetti Carbonara](food_item) wiht [onions](special_request)?
+    - I watn [Spaghetti Carbonara](food_item), entra [cheese](special_request)
+    - I’d ilke to ogder a [Tiramisu](food_item)
+    - Can I hawe a [Tiramisu](food_item) wtih [onions](special_request)?
+    - I wan [Tiramisu](food_item), xetra [cheese](special_request)
+
+- regex: food_item
+  examples: |
+    - (?i)\b[a-zA-Z]+(?:\s[a-zA-Z]+)?\b
+
+- regex: special_request
+  examples: |
+    - (?i)\b[a-zA-Z]+(?:\s[a-zA-Z]+)?\b

@@ -1,0 +1,24 @@
+test_stories:
+- story: Test user asking for menu
+  steps:
+  - user: "Hi"
+    intent: greet
+  - action: utter_greet
+  - user: "Can I see the menu?"
+    intent: ask_menu
+  - action: action_show_menu
+
+- story: Test checking opening status
+  steps:
+  - user: "Is the restaurant open on Monday at 14:00?"
+    intent: ask_open_status
+    entities:
+      - day: "Monday"
+      - time: "14"
+  - action: action_check_open_status
+
+- story: Test ordering with special request
+  steps:
+  - user: "I’d like to order a burger with onions."
+    intent: order_food
+  - action: action_place_order

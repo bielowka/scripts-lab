@@ -1,0 +1,29 @@
+version: "3.1"
+
+stories:
+- story: User asks for menu
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_menu
+  - action: action_show_menu
+
+- story: User asks for hours and places an order
+  steps:
+  - intent: ask_hours
+  - action: utter_show_hours
+  - intent: ask_open_status
+  - action: action_check_open_status
+  - intent: order_food
+  - action: action_place_order
+
+- story: User greets, asks for menu, places an order and says goodbye
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_menu
+  - action: action_show_menu
+  - intent: order_food
+  - action: action_place_order
+  - intent: goodbye
+  - action: utter_goodbye
