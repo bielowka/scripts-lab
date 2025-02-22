@@ -1,2 +1,2 @@
-# scripts-lab - !!IN PROGRESS
+# scripts-lab
 Projects for university class "Pracownia języków skryptowych"
